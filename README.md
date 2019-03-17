@@ -33,11 +33,11 @@ $ TestNow=`date +%d-%m-%Y_%H.%M.%S` && py.test -v -s -n 2 --cucumberjson=results
 
 ![Alt text](/ReadmeImages/ReportFolder_rlr.png?raw=true "Report Folder")
 
-11. Navigate to "Relayr_EmployeeMS_APITestSuite/results" folder and open "<timeStamp>-Log.log" file to view the latest test execution logs in detail
+11. Navigate to "Relayr_EmployeeMS_APITestSuite/results" folder and open "timeStamp-Log.log" file to view the latest test execution logs in detail
 
 ![Alt text](/ReadmeImages/Log_rlr.png?raw=true "Report HTML")
 
-12. Navigate to "Relayr_EmployeeMS_APITestSuite/results" folder and open "<timeStamp>-Report.html" file in your favourite browser to view the latest test execution report in detail
+12. Navigate to "Relayr_EmployeeMS_APITestSuite/results" folder and open "timeStamp-Report.html" file in your favourite browser to view the latest test execution report in detail
 
 ![Alt text](/ReadmeImages/ReportHTML_rlr.png?raw=true "Report HTML")
 
