@@ -10,7 +10,9 @@ from pytest_bdd import (
     parsers
 )
 
+
 '''SCENARIO'S'''
+
 # Scenario implementation to GET all employees
 @scenario('employee.feature', 'List all employees in the employee management system')
 def test_scenario_list_employees():
@@ -31,7 +33,9 @@ def test_scenario_update_employee():
 def test_scenario_delete_employee():
     pass
 
-'''GIVEN'S'''
+
+'''GIVEN'S (Pre-condition)'''
+
 # Given implementation is a pre-condition to check if the service is up and running
 @given('the employee management service is up and running')
 def given_service_running(container_url):
@@ -48,7 +52,9 @@ def given_employee_id(service_url, empId):
     assert resp.status_code == 200
     assert j['data']['id'] == empId
 
-'''WHEN'S'''
+
+'''WHEN'S (Action)'''
+
 # When implementation is an action to get all employees in a particular page in the system
 @when(parsers.parse('I fetch all employees in page {page:d} of the system'))
 def when_fetch_employees_page(service_url, page, context):
@@ -94,7 +100,9 @@ def when_delete_user(service_url, empId, context):
     assert resp.status_code == 204
     context['empDel'] = resp.status_code
 
-'''THEN'S'''
+
+'''THEN'S (Verification)''' 
+
 # Then implementation is a verification to check the employees returned from the system
 @then(parsers.parse('I should see {emps:d} employees returned'))
 def then_all_employees(emps, context):
